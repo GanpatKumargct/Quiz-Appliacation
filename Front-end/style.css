@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.landing-page{
+    background: white url(images/land.jpg) no-repeat scroll center;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgb(233, 220, 229);
+    
+}
+
+.landing-page .wrapper{
+    background-color: rgba(7, 7, 7, 0.911);
+    height: 100%;
+    
+}
+
+
+
+.landing-page .flex-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+.landing-page .vaction-heading{
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.button{
+    color: bisque;
+    text-decoration: none;
+    background-color: blueviolet;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px black;
+    margin: 20px;
+
+}
+
+.button:hover{
+    color: #e9c215;
+    background-color: aqua;
+}
+
+.header-quiz{
+    background-color: rgb(89, 89, 179);
+    color: rgb(247, 247, 247);
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+
+}
+
+.header-quiz .header{
+    font-size: 60px;
+}
+
+.main-nav{
+    background-color: rgba(7, 7, 7, 0.911);
+    padding: 10px;
+    text-align: end;
+    position: sticky;
+    top: 0;
+    box-shadow: rgb(31, 30, 30);
+}
+
+.main-nav a{
+    color: #f1f8f1;
+    /* background-color: rgb(161, 155, 156); */
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 5px;
+    display: inline-block;
+
+}
+
+.main-nav a:hover{
+    color: bisque;
+    background-color: #e9c215;
+}
+
+/* Header Section
+ */
+
+#quiz-packages{
+    
+    text-align: center;
+    text-decoration: none;
+    padding: 30px;
+    color: rgb(31, 31, 29);
+    background-color: rgb(240, 232, 232);
+}
+
+#quiz-packages #quiz-heading{
+    font-size: 40px;
+}
+
+
+
+#quiz-description{
+    text-align: left;
+    margin: 5px;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.package-wrapper .package-card{
+    box-shadow: 0 0 10px grey;
+    border-radius: 5px;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    
+}
+
+.package-card img{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.package-card img:hover{
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+}
+
+.package-card .button:hover{
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+}
+
+.package-card .card-heading{
+    padding: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+#top-performer {
+    display: inline-block;
+    text-align: center;
+}
+
+.top-performer #heading{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 40px;
+    color: grey;
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.top-performer .image-card{
+    object-fit: cover;
+}
+
+#top-performerMain{
+    height: 600px;
+    width: 100%;
+    
+}
+
+
+#top-performerMain .image-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#top-performerMain .top-performer .image-card img{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #111111;
+    
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+#top-performerMain .image-card img:hover{
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#Notes{
+    margin: 10px;
+    margin-top: 20px;
+}
+.notes{
+    
+    text-align: center;
+    padding: 40px;
+}
+
+.notes .notesheading{
+    /* padding-top: 20px; */
+    font-size: 40px;
+    color: grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 20px;
+}
+
+.notes .notesdescription{
+    padding-top: 10px;
+}
+
+.notes .noteswrapper .notes-card{
+    padding-top: 30px;
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(46, 45, 45);
+    display: inline-block;
+    margin: 20px;
+}
+
+.notes .noteswrapper img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+
+.notes .noteswrapper .notes-card img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#footer{
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(248, 239, 239);
+    color: rgb(107, 82, 82);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+}
