@@ -9,7 +9,7 @@ public class Option {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long optionId;
-    private String questionTest;
+    private String questionText;
 
     @ManyToOne
     @JoinColumn(name = "question_id", nullable = false)
@@ -23,12 +23,12 @@ public class Option {
         this.optionId = optionId;
     }
 
-    public String getQuestionTest() {
-        return questionTest;
+    public String getQuestionText() {
+        return questionText;
     }
 
-    public void setQuestionTest(String questionTest) {
-        this.questionTest = questionTest;
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
     }
 
     public Question getQuestion() {

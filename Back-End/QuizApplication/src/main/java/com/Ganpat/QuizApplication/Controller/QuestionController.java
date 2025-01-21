@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/home")
+//@RequestMapping("/home")
 public class QuestionController {
 
     @Autowired
     QuestionService questionService;
 
     @GetMapping("/home")
-    public void HomePage(){
-        System.out.println("Welcome Quiz...");
+    public String HomePage(){
+        return "Welcome to Quiz application";
     }
 
     @GetMapping("/questions")

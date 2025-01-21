@@ -1,7 +1,8 @@
 package com.Ganpat.QuizApplication.Entity;
 
-import jakarta.persistence.*;
 
+
+import jakarta.persistence.*;
 
 import java.util.List;
 
