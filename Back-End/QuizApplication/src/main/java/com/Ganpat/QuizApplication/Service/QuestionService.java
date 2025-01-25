@@ -2,6 +2,7 @@ package com.Ganpat.QuizApplication.Service;
 
 
 import com.Ganpat.QuizApplication.Entity.Question;
+import com.Ganpat.QuizApplication.Entity.Quizquestion;
 import com.Ganpat.QuizApplication.Repo.QuestionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,8 +15,14 @@ public class QuestionService {
     @Autowired
     QuestionRepo questionRepo;
 
-    public List<Question> AllQuestions(){
-        List<Question> questionRepoAll = questionRepo.findAll();
-        return questionRepoAll;
+    public List<Quizquestion> getAllQuestion(){
+        List<Quizquestion> quizquestions = questionRepo.findAll();
+        return quizquestions;
     }
+
+    public Quizquestion saveQuestion(Quizquestion quizquestion){
+        Quizquestion save = questionRepo.save(quizquestion);
+        return save;
+    }
+
 }

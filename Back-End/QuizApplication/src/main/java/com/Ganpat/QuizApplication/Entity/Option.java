@@ -3,8 +3,8 @@ package com.Ganpat.QuizApplication.Entity;
 import jakarta.persistence.*;
 
 
-@Entity
-@Table(name = "options")
+//@Entity
+//@Table(name = "options")
 public class Option {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
