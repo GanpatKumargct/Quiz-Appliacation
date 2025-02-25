@@ -1,7 +1,7 @@
 let currentQuestionIndex = 0;
 let questions = [];
-let correctAnswers = 0; // Variable to track the number of correct answers
-let totalQuestions = 0; // This will be set dynamically based on the API response
+let correctAnswers = 0; // Track correct answers
+let totalQuestions = 0; // Set dynamically based on API response
 
 // Function to fetch questions from the API
 async function fetchQuestions() {
@@ -12,7 +12,7 @@ async function fetchQuestions() {
         }
         questions = await response.json(); // Assume API returns an array of question objects
         totalQuestions = questions.length; // Set totalQuestions based on fetched data
-        document.getElementById('total-questions').textContent = totalQuestions; // Update the total questions in the HTML
+        document.getElementById('total-questions').textContent = totalQuestions; // Update total questions count
         displayQuestion();
     } catch (error) {
         console.error('Error fetching questions:', error);
@@ -27,8 +27,8 @@ function displayQuestion() {
     const optionsContainer = document.getElementById('options-container');
     const currentQuestion = questions[currentQuestionIndex];
 
-    // Update this line to match the correct property
-    questionText.textContent = currentQuestion.questionText;
+    // ✅ Fix: Use the correct API property name
+    questionText.textContent = currentQuestion.question;
     optionsContainer.innerHTML = ''; // Clear previous options
 
     currentQuestion.options.forEach(option => {
@@ -45,7 +45,7 @@ function displayQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
 
-    // Update this line to match the correct property
+    // ✅ Fix: Use the correct API property name
     if (selectedOption === currentQuestion.correctAnswer) {
         correctAnswers++; // Increment score if the answer is correct
     }

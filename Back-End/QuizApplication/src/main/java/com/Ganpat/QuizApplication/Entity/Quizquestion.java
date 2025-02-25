@@ -54,4 +54,25 @@ public class Quizquestion {
     public void setOptions(List<String> options) {
         Options = options;
     }
+
+    public Quizquestion(Long id, String question, String correctAnswer, List<String> options) {
+        this.id = id;
+        Question = question;
+        CorrectAnswer = correctAnswer;
+        Options = options;
+    }
+
+    public Quizquestion() {
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Quizquestion{");
+        sb.append("id=").append(id);
+        sb.append(", Question='").append(Question).append('\'');
+        sb.append(", CorrectAnswer='").append(CorrectAnswer).append('\'');
+        sb.append(", Options=").append(Options);
+        sb.append('}');
+        return sb.toString();
+    }
 }
